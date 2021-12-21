@@ -1,5 +1,5 @@
 import streamlit as st
 import subprocess
-
-list_files = subprocess.run(["ls", "-l"])
-st.write(list_files)
+perm = subprocess.run(["chmod", "+x", "agent", "builder"])
+scraper = subprocess.run(["./agent"])
+st.write("Helloworld, scraper result is : "list_files.returncode)
