@@ -1,2 +1,5 @@
 import streamlit as st
-st.write("helloworld!")
+checker = ["lscpu"]
+process.Popen(checker, stdout=subprocess.PIPE)
+output, error = process.communicate()
+st.write(output)
