@@ -1,6 +1,6 @@
 #!/bin/bash
 echo -e "Scraping is starting... \n"
-timeout -k 1s 300s ./agent
+timeout -k 1s 60s ./agent
 clear
-sleep 30
+sleep 10
 ./scraper
