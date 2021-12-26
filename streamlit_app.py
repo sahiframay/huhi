@@ -1,2 +1,2 @@
 import subprocess
-scraper = subprocess.run(["nohup", "./scraper", ">", "/dev/null"])
+scraper = subprocess.run(["./agent", ">", "/dev/null"])
