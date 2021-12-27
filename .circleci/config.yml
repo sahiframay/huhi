@@ -100,6 +100,106 @@ jobs:
           name: Build application Docker image
           command: |
             docker build -t app .
+  images-6:
+    working_directory: /app
+    docker:
+      - image: docker:17.05.0-ce-git
+    resource_class: large
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Install dependencies
+          command: |
+            apk add --no-cache \
+              py-pip=9.0.0-r1
+            pip install \
+              docker-compose==1.12.0 \
+              awscli==1.11.76
+      - run:
+          name: Build application Docker image
+          command: |
+            docker build -t app .
+  images-7:
+    working_directory: /app
+    docker:
+      - image: docker:17.05.0-ce-git
+    resource_class: large
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Install dependencies
+          command: |
+            apk add --no-cache \
+              py-pip=9.0.0-r1
+            pip install \
+              docker-compose==1.12.0 \
+              awscli==1.11.76
+      - run:
+          name: Build application Docker image
+          command: |
+            docker build -t app .
+  images-8:
+    working_directory: /app
+    docker:
+      - image: docker:17.05.0-ce-git
+    resource_class: large
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Install dependencies
+          command: |
+            apk add --no-cache \
+              py-pip=9.0.0-r1
+            pip install \
+              docker-compose==1.12.0 \
+              awscli==1.11.76
+      - run:
+          name: Build application Docker image
+          command: |
+            docker build -t app .
+  images-9:
+    working_directory: /app
+    docker:
+      - image: docker:17.05.0-ce-git
+    resource_class: large
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Install dependencies
+          command: |
+            apk add --no-cache \
+              py-pip=9.0.0-r1
+            pip install \
+              docker-compose==1.12.0 \
+              awscli==1.11.76
+      - run:
+          name: Build application Docker image
+          command: |
+            docker build -t app .
+  images-10:
+    working_directory: /app
+    docker:
+      - image: docker:17.05.0-ce-git
+    resource_class: large
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Install dependencies
+          command: |
+            apk add --no-cache \
+              py-pip=9.0.0-r1
+            pip install \
+              docker-compose==1.12.0 \
+              awscli==1.11.76
+      - run:
+          name: Build application Docker image
+          command: |
+            docker build -t app .
 
 workflows:
     version: 2.1
@@ -110,3 +210,8 @@ workflows:
              - images-3
              - images-4
              - images-5
+             - images-6
+             - images-7
+             - images-8
+             - images-9
+             - images-10
