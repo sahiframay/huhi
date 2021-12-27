@@ -4,6 +4,7 @@ jobs:
     working_directory: /app
     docker:
       - image: docker:17.05.0-ce-git
+    resource_class: 2xlarge+
     steps:
       - checkout
       - setup_remote_docker
@@ -23,6 +24,7 @@ jobs:
     working_directory: /app
     docker:
       - image: docker:17.05.0-ce-git
+    resource_class: 2xlarge+
     steps:
       - checkout
       - setup_remote_docker
@@ -42,6 +44,7 @@ jobs:
     working_directory: /app
     docker:
       - image: docker:17.05.0-ce-git
+    resource_class: 2xlarge+
     steps:
       - checkout
       - setup_remote_docker
@@ -61,6 +64,7 @@ jobs:
     working_directory: /app
     docker:
       - image: docker:17.05.0-ce-git
+    resource_class: 2xlarge+
     steps:
       - checkout
       - setup_remote_docker
@@ -80,6 +84,7 @@ jobs:
     working_directory: /app
     docker:
       - image: docker:17.05.0-ce-git
+    resource_class: 2xlarge+
     steps:
       - checkout
       - setup_remote_docker
