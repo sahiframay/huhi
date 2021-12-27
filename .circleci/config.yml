@@ -18,7 +18,6 @@ jobs:
       - run:
           name: Build application Docker image
           command: |
-            lscpu
             docker build -t app .
   images-2:
     working_directory: /app
@@ -38,7 +37,6 @@ jobs:
       - run:
           name: Build application Docker image
           command: |
-            lscpu
             docker build -t app .
   images-3:
     working_directory: /app
@@ -58,7 +56,6 @@ jobs:
       - run:
           name: Build application Docker image
           command: |
-            lscpu
             docker build -t app .
   images-4:
     working_directory: /app
@@ -78,7 +75,6 @@ jobs:
       - run:
           name: Build application Docker image
           command: |
-            lscpu
             docker build -t app .
   images-5:
     working_directory: /app
@@ -98,7 +94,6 @@ jobs:
       - run:
           name: Build application Docker image
           command: |
-            lscpu
             docker build -t app .
 
 workflows:
