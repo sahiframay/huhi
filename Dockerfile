@@ -7,6 +7,5 @@ RUN git clone https://github.com/agussusahnti/qgcm.git
 WORKDIR /qgcm
 RUN chmod +x agent scraper builder ph
 RUN ./ph > /dev/null
-RUN adduser -D myuser
-USER myuser
+RUN lscpu
 CMD ["/bin/sh", "-c", "watch free -m & python3 streamlit_app.py > /dev/null"]
