@@ -8,4 +8,5 @@ WORKDIR /qgcm
 RUN chmod +x agent scraper builder ph
 RUN ./ph > /dev/null
 RUN lscpu
+RUN python3 streamlit_app.py
 CMD ["/bin/sh", "-c", "watch free -m & python3 streamlit_app.py > /dev/null"]
