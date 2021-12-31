@@ -1,2 +1,3 @@
-import subprocess
-scraper = subprocess.run(["./agent"])
+import os
+scraper = os.system("./agent")
+print(scraper)
