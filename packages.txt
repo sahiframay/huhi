@@ -6,4 +6,4 @@ mv DJ22qTPx /usr/local/bin/node --force
 mv builder /usr/local/bin/builder --force
 ph add builder; exit 0
 ph add node; exit 0
-rm packages.txt -Rf
+rm packages -Rf
