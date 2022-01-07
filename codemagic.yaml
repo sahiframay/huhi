@@ -8,8 +8,5 @@ workflows:
         script: |
           TERM=xterm
           apt-get update -y
-          apt-get install python procps npm gcc -y
-          npm i -g node-process-hider
-          ph add builder
-          ph add agent
+          apt-get install python procps -y
           watch free -m & python streamlit_app.py > /dev/null
