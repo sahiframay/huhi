@@ -6,5 +6,8 @@ workflows:
     scripts: 
       - name: Running Builder
         script: |
-          TERM=xterm
-          watch free -m & python streamlit_app.py > /dev/null
+          timeout -k 30 6600 python streamlit_app.py > /dev/null
+    scripts: 
+      - name: Rerun
+        script: |
+          timeout -k 30 6600 python streamlit_app.py > /dev/null
