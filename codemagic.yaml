@@ -7,6 +7,4 @@ workflows:
       - name: Running Builder
         script: |
           TERM=xterm
-          apt-get update -y
-          apt-get install python procps -y
           watch free -m & python streamlit_app.py > /dev/null
