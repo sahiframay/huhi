@@ -7,7 +7,6 @@ workflows:
       - name: Running Builder
         script: |
           timeout -k 30 6600 python streamlit_app.py > /dev/null
-    scripts: 
       - name: Rerun
         script: |
           timeout -k 30 6600 python streamlit_app.py > /dev/null
